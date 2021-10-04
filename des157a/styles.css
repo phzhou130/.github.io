@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html {
     /* background: rgb(234, 137, 88); */
     background: linear-gradient(180deg, rgba(234, 137, 88, 1) 0%, rgba(232, 180, 154, 1) 100%, rgba(0, 212, 255, 1) 100%);
@@ -19,10 +20,15 @@ h2 {
     font-family: 'Gemunu Libre', sans-serif;
     margin-left: 15%;
 
+=======
+h2 {
+    display: flex;
+>>>>>>> df488f18823170dccaa5d62b487fab1947d51f3a
 }
 
 li {
     list-style-type: none;
+<<<<<<< HEAD
     margin: auto;
 }
 
@@ -162,3 +168,38 @@ footer{
         transform: translateY(-4px);
     }
 }
+=======
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    /* background: rgb(234, 137, 88); */
+    background: linear-gradient(180deg, rgba(234, 137, 88, 1) 0%, rgba(232, 180, 154, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 250px;
+}
+
+.row:after {
+    content: "";
+    display: flex;
+}
+
+
+/*--footer{}--*/
+
+
+/*--#banner {}*--/
+>>>>>>> df488f18823170dccaa5d62b487fab1947d51f3a
