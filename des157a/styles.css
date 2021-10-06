@@ -15,8 +15,8 @@ h1{
     animation: headline 3s 1;
 }
 h2 {
-    color: white;
-    font-size: 20px;
+    color: rgb(252, 161, 3);
+    font-size: 25px;
     font-family: 'Gemunu Libre', sans-serif;
     margin-left: 15%;
 }
@@ -26,13 +26,13 @@ li{
 }
 
 a {
+    text-align: left;
     color: white;
-    font-size: 10px;
+    font-size: 20px;
     text-decoration: none;
-    text-align: center;
 }
-a:hover{
-    font-size: 15px;
+section a:hover{
+    font-size: 25px;
     transition: all 1s;
 }
 main{
@@ -40,7 +40,7 @@ main{
     
     margin:auto;
     
-    background-color: rgb(110, 30, 11,0.7);
+    /*background-color: rgb(110, 30, 11,0.7);*/
     display: flex;
     align-self: center;
     flex-direction: row;
@@ -55,19 +55,143 @@ main{
 
 }
 section{
-    margin: auto;
+    
+    line-height: 1.15;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
     font-family: 'Gemunu Libre', sans-serif;
-    align-content: center;
+    align-items: center;
     color:whitesmoke;
-    font-size: 20px;
-    padding:35px;
+    font-size: 30px;
+    padding:20px;
+}
+#part1, #part2, #part3{
+    display: flex;
+    border: 3px solid #2c3845;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 20px;
+}
+#part1{
+    background-color: #569597;
+}
+#part1:hover{
+    background-color: #006e5f;
+}
+#part2{
+    background-color: #2b5e7d;
+
+}
+#part2:hover{
+    background-color: #5c8987;
+}
+#part3{
+    background-color: rgb(66, 80, 102);
+}
+#part3:hover{
+    background-color: #b7b278;
+}
+.sky{
+    transform: rotateZ(45deg);
+}
+/*this is the animation of Meteor shower*/
+.star{
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    height: 2px;
+    background: linear-gradient( -45deg, #5f91ff, rgba(0,0,255,0));
+    filter: drop-shadow(0 0 6px #699bff);
+    animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
+}
+.star ::before, .star ::after{
+    position: absolute;
+    content: "";
+    /*top:calc(50% - 1px);*/
+    right: 0;
+    height: 2px;
+    width:30px;
+    background: linear-gradient(-45deg, rgba(0,0,255,0),#5f91ff,rgba(0,0,255,0));
+    border-radius: 100%;
+    transform: translateX(50%) rotateZ(45deg);
+    animation: shining 3000ms ease-in-out infinite;
+}
+
+.star::after{
+    transform: translateX(50%) rotateZ(-45deg);
+
+}
+
+.star:nth-child(1){
+    top:calc(25% - 50px);
+    left: calc(50% - 300px);
+    animation-delay: 650ms;
+}
+
+.star:nth-child(1)::before, .star:nth-child(1)::after{
+    animation-delay: 650ms;
+}
+
+.star:nth-child(2){
+    top:calc(25% - -70px);
+    left: calc(50% - 450px);
+    animation-delay: 550ms;
+}
+.star:nth-child(2)::before, .star:nth-child(1)::after{
+    animation-delay: 550ms;
+}
+/*
+
+.star:nth-child(3){
+    top:calc(25% - -90px);
+    left: calc(30% - 50px);
+    animation-delay: 1500ms;
+}
+.star:nth-child(3)::before, .star:nth-child(1)::after{
+    animation-delay: 15000ms;
+}*/
+
+@keyframes tail {
+    0%{
+        width: 0;
+    }
+    30%{
+        width: 100px;
+    }
+    100%{
+        width:0;
+    }
+}
+@keyframes shining {
+    0%{
+        width:0;
+    }
+    50%{
+        width: 30px;
+    }
+    100%{
+        width: 0;
+    }
+}
+@keyframes shooting {
+    0%{
+        transform: translateX(0);
+
+    }
+    100%{
+        transform: translateX(320px);
+    }
 }
 footer{
+    gap:50px;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
     background-color: burlywood;
     color: white;
     font-family: 'Gemunu Libre', sans-serif;
-    font-size: 5px;
-    text-align: center;
+    justify-content: center;
     margin-bottom: 0%;
 }
 .banner{
@@ -84,8 +208,9 @@ footer{
 }
 
 .boat{
+    top: 10px;
     display: flex;
-    position: absolute;
+    position: relative;
     animation: move 15s linear ;
     animation-fill-mode: forwards;
 }
@@ -106,7 +231,7 @@ footer{
     top: -150px;
     height: 50px;
     width: 50px;
-    background-color: yellow;
+    background-color:#ebcd09;
     border-radius: 50%;
 }
 
@@ -121,6 +246,7 @@ footer{
     left: 600px;
     top: -130px;
 }
+
 @keyframes headline {
     0%{
         color: black;
