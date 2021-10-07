@@ -39,7 +39,7 @@ a {
 }
 section a:hover{
     font-size: 20px;
-    transition: all 1s;
+    transition: 20px 1s;
 }
 main{
     width: 700px; 
@@ -61,7 +61,8 @@ main{
 
 }
 ul{
-    position: relative;
+    text-align: center;
+    width:100%;
     padding: 0px;
     margin: 0px;
 }
