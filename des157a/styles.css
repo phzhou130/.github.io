@@ -19,9 +19,14 @@ h2 {
     color: rgb(252, 161, 3);
     font-size: 25px;
     font-family: 'Gemunu Libre', sans-serif;
-    margin-left: 15%;
 }
-
+#des{
+    margin-left: 15%;
+    color: #e3f9fd;
+}
+#part2title{
+    font-size: 20px;
+}
 li{
     list-style-type: none;
 }
@@ -29,11 +34,11 @@ li{
 a {
     text-align: left;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
 }
 section a:hover{
-    font-size: 25px;
+    font-size: 20px;
     transition: all 1s;
 }
 main{
@@ -56,12 +61,13 @@ main{
 
 }
 ul{
+    position: relative;
     padding: 0px;
     margin: 0px;
 }
 section{
     margin-right: 0px;
-    padding: 0px;
+    padding: 20px;
     line-height: 1.15;
     display: flex;
     flex-direction: column;
@@ -70,9 +76,9 @@ section{
     align-items: center;
     color:whitesmoke;
     font-size: 30px;
-    padding:20px;
 }
 #part1, #part2, #part3{
+    position: relative;
     display: flex;
     border: 3px solid #2c3845;
     border-left: none;
@@ -96,7 +102,7 @@ section{
     background-color: rgb(66, 80, 102);
 }
 #part3:hover{
-    background-color: #b7b278;
+    background-color: rgb(79,114,108);
 }
 .sky{
     transform: rotateZ(45deg);
