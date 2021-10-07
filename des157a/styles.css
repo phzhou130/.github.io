@@ -5,6 +5,7 @@ html {
     height: auto;
     width: auto;
 }
+
 body{
     min-width:900px;
 }
@@ -54,8 +55,13 @@ main{
     background-color: burlywood;
 
 }
+ul{
+    padding: 0px;
+    margin: 0px;
+}
 section{
-    
+    margin-right: 0px;
+    padding: 0px;
     line-height: 1.15;
     display: flex;
     flex-direction: column;
