@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exp2</title>
+    <style>
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">Hi! this is exp2, let's start our work!</div>
+    <div id="text1">
+        <p>Let's start the experiment!</p>
+
+    </div>
+    <div id="classlist"></div>
+
+    <script>
+        var classes =[];
+        classes[0]="math";
+        classes[1]="english";
+        classes[2]="art";
+        
+
+        function askquestion(){
+            var ask1=prompt("You take math, english and art, what other class do you like?", " ");
+            if (ask1==null){
+                console.log("You didn't enter anything, I think you only like math, english and art.");
+            }
+            else{
+                classes.push(ask1);
+              
+            }
+            return classes;
+        }
+        // askquestion();
+        
+            // var newsentence=document.getElementById('text1');
+            // newsentence.innerHTML=`<p>You finish the question. You add the class ${classes[3]}</p>`;
+            // newsentence.className="blue";
+        function chooseclass(){
+            askquestion();
+            var newsentence=document.getElementById('text1');
+            newsentence.innerHTML=`<p>You finished the question. You add the class ${classes[3]}</p>`;
+            newsentence.className="blue";
+         
+            var ask2=prompt(`choose your favorite class from ${classes[0]},${classes[1]},${classes[2]},${classes[3]}`," ");
+            var listout=document.getElementById("classlist");
+            for(var i=0; i<classes.length;i++){
+                if (classes[i]==ask2){
+                    listout.innerHTML=`<p>Your favorite class is ${classes[i]}</p>`;
+                    listout.className="blue";
+
+                }
+            }
+            
+        }
+        chooseclass();
+        
+    </script>
+
+</body>
+</html>
