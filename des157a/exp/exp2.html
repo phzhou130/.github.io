@@ -20,47 +20,63 @@
     <div id="classlist"></div>
 
     <script>
+        //my code is aimming to ask the classes that students liked and let them to choose their favorite one, the page would record all student's choice
+        //you can set up the number of students you are willing to ask in the allStudent function.
+        //The students take math on monday, English on Tuesday, art on Thursday and the new class they add on Friday.
         var classes =[];
         classes[0]="math";
         classes[1]="english";
         classes[2]="art";
-        
+        var namelist =[];
+        var schedule=["Monday","Tuesday","Thursaday","Friday"];
 
         function askquestion(){
+            var name=prompt("Hi, what is your name"," ");
+            namelist[0]=name;
             var ask1=prompt("You take math, english and art, what other class do you like?", " ");
             if (ask1==null){
                 console.log("You didn't enter anything, I think you only like math, english and art.");
             }
             else{
-                classes.push(ask1);
+                classes[3]=ask1;
               
             }
             return classes;
         }
-        // askquestion();
-        
-            // var newsentence=document.getElementById('text1');
-            // newsentence.innerHTML=`<p>You finish the question. You add the class ${classes[3]}</p>`;
-            // newsentence.className="blue";
+       
         function chooseclass(){
             askquestion();
-            var newsentence=document.getElementById('text1');
-            newsentence.innerHTML=`<p>You finished the question. You add the class ${classes[3]}</p>`;
-            newsentence.className="blue";
-         
+            // var newsentence=document.getElementById('classlist');
+            var myTag=document.createElement('p');
+            var mySentence=document.createTextNode(`${namelist[0]} finished the question. ${namelist[0]} add the class ${classes[3]}`);
+            myTag.appendChild(mySentence);
+            document.getElementById('classlist').appendChild(myTag);
+            // newsentence.innerHTML=`<p>${askquestion.name} finished the question. ${askquestion.name} add the class ${classes[3]}</p>`;
+           
+            var time=`You can only take one of the classes. Math-Monday, English-Tuesday, Art-Thursday, ${classes[3]}-Friday`;
+            alert(time);
+            
             var ask2=prompt(`choose your favorite class from ${classes[0]},${classes[1]},${classes[2]},${classes[3]}`," ");
-            var listout=document.getElementById("classlist");
+            var myTag2=document.createElement('p');
             for(var i=0; i<classes.length;i++){
                 if (classes[i]==ask2){
-                    listout.innerHTML=`<p>Your favorite class is ${classes[i]}</p>`;
-                    listout.className="blue";
+                    var mySentence2=document.createTextNode(`${namelist[0]} favorite class is ${classes[i]}, ${namelist[0]} can take it on ${schedule[i]}`);
+                    myTag2.appendChild(mySentence2);
+
+                    document.getElementById('classlist').appendChild(myTag2);
 
                 }
             }
             
         }
-        chooseclass();
-        
+        function allStudent(total){
+            var studentnumber=total;
+            for(var i=0;i<studentnumber;i++){
+                chooseclass();
+                
+            }
+        }
+        allStudent(2);
     </script>
 
 </body>
