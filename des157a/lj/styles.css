@@ -1,0 +1,82 @@
+
+body{
+    background:  rgba(232, 180, 154, 1) ;
+
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+  
+}
+.site-container{
+    margin: 2rem auto;
+    max-width: calc(100%-80px);
+}
+.article-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(265px, 1fr));
+    gap:2rem;
+}
+.article-image{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.article-image img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+.article-card{
+    margin-right: 10px;
+
+    border-radius: 20px;
+    background: wheat;
+    /* transition: 0.3s; */
+}
+.article-card:hover{
+    padding: 10px;
+   box-shadow: 0 5px 20px rgb(150, 97, 97);
+    display: flex;
+    flex-direction: row-reverse;
+   cursor: pointer;
+}
+
+
+.article-content .card-category{
+    font-size: 10px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+}
+.article-content .card-excerpt{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: black;
+    margin: 10pt;
+}
+.site-container{
+    max-width: 800px;
+}
+.article-card{
+    margin-right: 10px;
+    display: grid;
+    grid-template-rows: 200px 1fr;
+}
+footer{
+    gap:50px;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    background-color: burlywood;
+    color: white;
+    font-family: 'Gemunu Libre', sans-serif;
+    justify-content: center;
+    margin-bottom: 0%;
+}
+a{
+    text-decoration: none;
+    color: goldenrod;
+}
