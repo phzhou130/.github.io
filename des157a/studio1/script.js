@@ -83,12 +83,12 @@ myForm.addEventListener('submit', function(event) {
         }
         else{
              document.getElementById('overlay').className='hidden';
-             myText = `Hi ${noun1}! It will rain soon`;
+             myText = `Hi ${noun1}! It will rain soon.`;
              myText2=`You are ${noun2} this year.`;
              myText3=`You open the aircon ${noun3} times per week.`;
              myText4="You do not know the importance of";
              myText7="protecting Mother Earth."
-             myText5=`To punish you, you can't watch sport event ${verb}.`;
+             myText5=`To punish you, you can't watch sport event ${verb}>_<`;
 
              myText6=`${adv} walk back home by yourself!`;
              document.getElementById('overlay3').className='showing';
@@ -119,4 +119,45 @@ myForm.addEventListener('submit', function(event) {
         i.value = " ";
     }
 });
+let c, ctx, rain;
 
+function loop(){
+    ctx.clearRect(0,0,c.width,c.height);
+    rain.show();
+    rain.fall();
+}
+class Rain{
+    constructor(x,y,l,v){
+        this.x=x;
+        this.y=y;
+        this.vy=v;
+        this.l=l;
+    }
+    show(){
+        ctx.beginPath();
+        ctx.strokeStyle = "white";
+        ctx.moveTo(this.x,this.y);
+        ctx.lineTo(this.x,this.y+this.l);
+        ctx.stroke();
+    }
+    fall(){
+        this.y+=this.vy;
+        if(this.y>c.height){
+            this.x=Math.floor(Math.random()*c.width)+5;
+            this.y=Math.floor(Math.random()*100)-100;
+            this.l=Math.floor(Math.random()*30)+1;
+            this.vy=Math.floor(Math.random()*12)+4;
+
+
+
+        }
+    }
+}
+
+function setup(){
+    c=document.getElementById("canvas");
+    ctx=c.getContext("2d");
+    rain=new Rain(10,10,20,6);
+    setInterval(loop,10);
+
+}
