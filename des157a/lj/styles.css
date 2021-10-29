@@ -30,7 +30,7 @@ p{
 }
 .site-container{
     margin: 2rem auto;
-    max-width: calc(100%-80px);
+    max-width: calc(100% - 80px);
 }
 .banner{
     display: flex;
@@ -88,8 +88,8 @@ p{
     to{
         color: lightcyan;
         box-shadow: 0 0 20px #ffc400, 0 0 30px #ffc400,
-        0 0 40px #ffc400,0 0 60px #ffc400, 0 0 70px #ffc400,
-        0 0 80px #ffc400, 0 1 90px #ffc400 ;
+        0 0 40px #ffc400, 0 0 60px #ffc400, 0 0 70px #ffc400,
+        0 0 80px #ffc400, 0 1 90px #ffc400;
     }
     
 }
