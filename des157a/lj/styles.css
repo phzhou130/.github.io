@@ -860,3 +860,7 @@ a{
         transform: translateY(-2000px);
     }
 }
+#personalimage{
+    display: flex;
+    flex-direction: row;
+}
