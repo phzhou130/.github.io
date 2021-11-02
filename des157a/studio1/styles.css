@@ -362,8 +362,3 @@ footer{
     right: 25%; */
     text-align: center;
 }
-canvas{
-    position: absolute;
-    z-index: auto;
-    background-color: black;
-}
