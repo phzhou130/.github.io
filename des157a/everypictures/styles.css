@@ -1,0 +1,132 @@
+html{
+    cursor: url('cursor1.png'), auto;
+
+}
+body{
+    background-color: white;
+}
+/* #backimages1{
+    display: flex;
+    justify-content: center ;
+    padding-top: 5%;
+  
+} */
+/* .circle{
+    width: 600px;
+    clip-path: circle();
+} */
+.hide {
+    display: none;
+}
+.show{
+
+    display: block;
+}
+button {
+    width: 300px;  
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    /* clip-path: circle(); */
+
+}
+#illustration{
+    overflow: scroll;
+    width: 300px;
+    height: 300px;
+    align-items: right;
+    /* margin: auto; */
+    clip-path: circle();
+}
+#everypic{    
+    /* cursor: url("cursor1.png"),auto; */
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    overflow: hidden;
+    width: 1200px;
+    height: 800px;
+    background-color: #6ff3ff;
+    
+}
+#cursor1{
+    position: absolute;
+
+}
+.canvas{
+    top:0;
+    left: 0;
+    position: relative;
+    transform: translate(-600px,-600px);
+    width: 200%;
+    height: auto;
+    padding: 200px;
+    transform: 1.5s ease-out;
+    display: flex; 
+}
+/* .canvas{
+        width: 50%;
+        position: absolute;
+        left: 50%;
+        top: 105%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+        line-height: 1.5em;
+} */
+figure {
+	display: block;
+	margin: 0;
+	width: 70vw;
+	height: 100vh;
+	position: fixed;
+	top:0;
+	right:0;
+	overflow: hidden;
+}
+h2{
+    text-align: center;
+    color: white;
+}
+footer{
+    position: absolute;
+    z-index: auto;
+    width: 100%;
+    bottom: -20%;
+    /* left: calc((100vw - 300px)/2);
+    right: calc((100vw - 300px)/2); */
+    /* left: 25%;
+    right: 25%; */
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #080808;
+}
+#cursor1{
+    color: white;
+}
+#font1 {
+    position: absolute;
+    padding:300px;
+}
+#font2 {
+    position: absolute;
+    padding:300px;
+}
+#font3{
+    position: absolute;
+    padding:300px;
+}
+#font4 {
+    position: absolute;
+    padding:300px;
+}
+#font5 {
+    position: absolute;
+    padding:300px;
+}
