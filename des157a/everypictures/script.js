@@ -53,14 +53,20 @@ start={x:0, y:0};
         canvas.style.transform=`translate(-${posX}px, -${posY}px)`;
         cursor1.style.left=event.x +"px";
         cursor1.style.top=event.y +"px";
-
-
-        
-        
+    
             
     
 
-    });    
+    });   
+    
+
+let illustration = this.document.getElementById('illustration');
+illustration.addEventListener('wheel', function(event){
+    console.log("Hello wheel");
+    scrollimage1();
+    scr
+});
+
 let font,font2,font3,font4,font5;
 
 function scrollimage1(){
@@ -70,7 +76,7 @@ function scrollimage1(){
     font2.className='show';
     document.getElementById('everypic').style.background='#80b7d8';
     let backimages2=document.getElementById('backimages2');
-    backimages2.scrollIntoView();
+    backimages2.scrollIntoView({behavior:"smooth"});
     let guangming=document.getElementById('guangming')
     guangming.className='hide';
     let nanshan=document.getElementById('nanshan')
@@ -87,7 +93,7 @@ function scrollimage2(){
     document.getElementById('everypic').style.background='#86b3d3';
 
     let backimages3=document.getElementById('backimages3');
-    backimages3.scrollIntoView();
+    backimages3.scrollIntoView({behavior:"smooth"});
     let nanshan=document.getElementById('nanshan')
     nanshan.className='hide';
     let futian=document.getElementById('futian');
@@ -102,7 +108,7 @@ function scrollimage3(){
     document.getElementById('everypic').style.background='#0d1269';
 
     let backimages4=document.getElementById('backimages4');
-    backimages4.scrollIntoView();
+    backimages4.scrollIntoView({behavior:"smooth"});
     let futian=document.getElementById('futian');
     futian.className='hide';
     let baoan=document.getElementById('baoan');
@@ -117,7 +123,7 @@ function scrollimage4(){
     document.getElementById('everypic').style.background='#000023';
 
     let backimages5=document.getElementById('backimages5');
-    backimages5.scrollIntoView();
+    backimages5.scrollIntoView({behavior:"smooth"});
     let baoan=document.getElementById('baoan');
     baoan.className = 'hide';
     let yantian=document.getElementById('yantian');
