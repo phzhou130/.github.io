@@ -46,8 +46,11 @@ let posY=0;
 let scale=1;
 let pann=false;
 start={x:0, y:0};
+//to control the movement of the cursor words on the canvas and the images' movements on the canvas
  window.addEventListener('mousemove',function(event)
     {   let cursor1=document.getElementById('cursor1');
+        
+
         let posX=event.clientX-container.getBoundingClientRect().left;
         let posY=event.clientY-container.getBoundingClientRect().top;
         canvas.style.transform=`translate(-${posX}px, -${posY}px)`;
@@ -58,17 +61,18 @@ start={x:0, y:0};
     
 
     });   
-    
 
-let illustration = this.document.getElementById('illustration');
-illustration.addEventListener('wheel', function(event){
-    console.log("Hello wheel");
-    scrollimage1();
-    scr
-});
+
+// let illustration = this.document.getElementById('illustration');
+// illustration.addEventListener('wheel', function(event){
+//     console.log("Hello wheel");
+//     scrollimage1();
+//     scr
+// });
+//I am still trying to add the onwheel instead of pressing the images so I command out the practice part 
 
 let font,font2,font3,font4,font5;
-
+//control the 5 background images in the circles. they gave reflections when you pressed the circle
 function scrollimage1(){
     font=document.getElementById('font1');
     font.className='hide';
@@ -131,12 +135,13 @@ function scrollimage4(){
 
 
 }
+//control the reload of the last image
 function scrollimage5(){
     location.reload()
-    // let backimages1=document.getElementById('backimages1');
-    // backimages1.scrollIntoView();
+
     
 }
+//control the things on the canvas(the colored background area),here the transform is for the scroll
 function transformimg(){
     canvas.style.transform="translate("+ posX + 'px,' + posY + 'px) scale(' +scale+")";
 }
@@ -154,13 +159,13 @@ canvas.onmouseup=function(e){
     posY=(e.clientY - start.y);
     transformimg();
 }
-
+//the zoom in/out effect(inspired from the ppt slides)
 canvas.onwheel = function(e){
     e.preventDefault();
     var xs = (e.clientX - posX)/scale;
     var ys =(e.clientY - posY)/scale;
-    var delta =(e.wheelDelta ? e.wheelDelta : -e.deltaY);
-    (delta > 0) ? (scale *=1.2) : (scale /=1.2);
+    var delta =(e.wheelDelta ? e.wheelDelta : -e.deltaY);//this calculation is inspired by an online map
+    (delta > 0) ? (scale *=1.5) : (scale /=1.5);
 
     posX = e.clientX - xs * scale;
     posY = e.clientY - ys * scale;

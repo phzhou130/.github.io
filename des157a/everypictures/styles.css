@@ -34,12 +34,13 @@ button {
 
 }
 #illustration{
+    /* cursor: pointer; */
     overflow: scroll;
     width: 300px;
     height: 300px;
     align-items: right;
-    /* margin: auto; */
     clip-path: circle();
+
 }
 #everypic{    
     /* cursor: url("cursor1.png"),auto; */
@@ -108,6 +109,9 @@ a{
     color: #080808;
 }
 #cursor1{
+    color: white;
+}
+#cursor2{
     color: white;
 }
 #font1 {
