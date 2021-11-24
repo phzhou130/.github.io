@@ -55,8 +55,11 @@ button{
 
     margin-top:-22%;
     margin-left:16%;
-
-
+    
+}
+#bone{
+    width: 160px;
+    height: 80px;
 }
 #winner2{
 
