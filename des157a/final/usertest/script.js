@@ -37,7 +37,8 @@ game.addEventListener("click", function(){
 });
 
 document.getElementById('quit').addEventListener("click",function(){
-        window.location.reload(true);
+        //window.location.reload(true);
+        location.reload();
     });
     
 function moveBowlLeft()
@@ -81,6 +82,7 @@ function moveBowlRight1()
 }
 //control the bowl to move left/ right
 function control(e){
+    console.log("press");
     e.preventDefault();
     if(e.key == "ArrowLeft"){
         moveBowlLeft();
