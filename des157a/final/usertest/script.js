@@ -36,12 +36,13 @@ game.addEventListener("click", function(){
     generateBone();
     
     document.addEventListener("keydown",control);
-    // document.getElementById('quit').addEventListener("click",function(){
-    //     location.reload();
-    // });
     
     
 });
+document.getElementById('quit').addEventListener("click",function(){
+        window.location.reload(true);
+    });
+    
 function moveBowlLeft()
 {
     if (bowlimageLeft > 700){
