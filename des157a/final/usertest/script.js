@@ -11,7 +11,7 @@
         Since it needs two players, you might have to one hand to control one player.
     3. Check the sound effect of this game.
     Thank you for your time`);
-    
+
 var game= document.getElementById("start");
 var bowlimage = document.querySelector(".bowlimage");
 var fishes=document.querySelector(".fishes");
@@ -36,6 +36,9 @@ game.addEventListener("click", function(){
     generateBone();
     
     document.addEventListener("keydown",control);
+    document.getElementById('quit').addEventListener("click",function(){
+        location.reload();
+    });
     
     
 });
