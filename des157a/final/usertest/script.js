@@ -36,9 +36,9 @@ game.addEventListener("click", function(){
     generateBone();
     
     document.addEventListener("keydown",control);
-    document.getElementById('quit').addEventListener("click",function(){
-        location.reload();
-    });
+    // document.getElementById('quit').addEventListener("click",function(){
+    //     location.reload();
+    // });
     
     
 });
