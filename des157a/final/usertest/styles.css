@@ -1,0 +1,82 @@
+body{
+    background: url("./gameon.png");
+    /* max-width: 1266px; */
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    right: 0px;
+    left: 0px;
+    margin-right: 0px;
+    position: fixed;
+    font-family: 'VT323', monospace;}
+
+
+.bowlimage{
+    /* width: 80px;
+    height: 50px;
+    background-color: cornsilk; */
+    /* background: url("./score1_1.png"); */
+
+    position: absolute;
+    bottom: 15px;
+    left: calc(50% - 25px);
+    /* background-repeat: no-repeat; */
+}
+.fish{
+    bottom: 800px;
+    width: 100px;
+    height: 70px;
+    /* background-color: cornsilk; */
+    background-image: url("./fish_1.png");
+    background-repeat: no-repeat;
+
+    position: absolute;
+}
+.bone{
+    bottom: 800px;
+    width: 100px;
+    height: 70px;
+    background-image: url("./bone_2.png");
+    background-repeat: no-repeat;
+    position: absolute;
+}
+.bowlimage1{
+    /* width: 80px;
+    height: 50px;
+    background-color: cornsilk; */
+    /* background: url("./score1_1.png"); */
+
+    position: absolute;
+    bottom: 15px;
+    left: 50px;
+    /* background-repeat: no-repeat; */
+}
+#score1{
+    left: 50px;
+    color: black;
+    font-size: 30px;
+  
+}
+#score2{
+    left: 50px;
+    color: black;
+    font-size: 30px;
+  
+}
+footer{
+    position: absolute;
+    z-index: auto;
+    width: 100%;
+    top: 0%;
+    /* left: calc((100vw - 300px)/2);
+    right: calc((100vw - 300px)/2); */
+    /* left: 25%;
+    right: 25%; */
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: wheat;
+}
