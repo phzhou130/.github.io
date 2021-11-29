@@ -31,14 +31,11 @@ var bowlimageLeft1= parseInt(window.getComputedStyle(bowlimage1).getPropertyValu
 
 var bowlimageBottom1= parseInt(window.getComputedStyle(bowlimage1).getPropertyValue("bottom"));
 game.addEventListener("click", function(){
-
     generateFish();
     generateBone();
-    
     document.addEventListener("keydown",control);
-    
-    
 });
+
 document.getElementById('quit').addEventListener("click",function(){
         window.location.reload(true);
     });
@@ -84,6 +81,7 @@ function moveBowlRight1()
 }
 //control the bowl to move left/ right
 function control(e){
+    e.preventDefault();
     if(e.key == "ArrowLeft"){
         moveBowlLeft();
         // var meow = new Audio("cat_meow.wav");
