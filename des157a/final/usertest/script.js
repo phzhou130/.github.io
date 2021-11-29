@@ -31,6 +31,7 @@ var bowlimageLeft1= parseInt(window.getComputedStyle(bowlimage1).getPropertyValu
 
 var bowlimageBottom1= parseInt(window.getComputedStyle(bowlimage1).getPropertyValue("bottom"));
 game.addEventListener("click", function(){
+    console.log("game has started");
     generateFish();
     generateBone();
     document.addEventListener("keydown",control);
@@ -38,7 +39,7 @@ game.addEventListener("click", function(){
 
 document.getElementById('quit').addEventListener("click",function(){
         //window.location.reload(true);
-        location.reload();
+        location.reload(false);
     });
     
 function moveBowlLeft()
@@ -81,6 +82,7 @@ function moveBowlRight1()
 
 }
 //control the bowl to move left/ right
+// Make sure you can print out "press" when a button is pressed.
 function control(e){
     console.log("press");
     e.preventDefault();
