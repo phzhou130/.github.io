@@ -1,0 +1,122 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    right: 0px;
+    left: 0px;
+    margin-right: 0px;
+    position: fixed;
+    font-family: 'VT323', monospace;
+}
+
+#backgroundimage {
+    background-image: url("./gameon.png");
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: none;
+}
+
+.bowlimage {
+    /* width: 80px;
+    height: 50px;
+    background-color: cornsilk; */
+    /* background: url("./score1_1.png"); */
+    position: absolute;
+    bottom: 15px;
+    left: calc(50% - 25px);
+    /* background-repeat: no-repeat; */
+}
+
+.fish {
+    bottom: 800px;
+    width: 100px;
+    height: 70px;
+    /* background-color: cornsilk; */
+    background-image: url("./fish_1.png");
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.bone {
+    bottom: 800px;
+    width: 100px;
+    height: 70px;
+    background-image: url("./bone_2.png");
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.bowlimage1 {
+    /* width: 80px;
+    height: 50px;
+    background-color: cornsilk; */
+    /* background: url("./score1_1.png"); */
+    position: absolute;
+    bottom: 15px;
+    left: 50px;
+    /* background-repeat: no-repeat; */
+}
+
+#score1 {
+    position: relative;
+    margin-left: 115px;
+    color: black;
+    font-size: 30px;
+    top: 100px;
+}
+
+#score2 {
+    top: 100px;
+    position: relative;
+    margin-left: 120px;
+    color: black;
+    font-size: 30px;
+}
+
+footer {
+    position: absolute;
+    z-index: auto;
+    width: 100%;
+    top: 0%;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: wheat;
+}
+
+.showing {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+#gamestart {
+    position: absolute;
+    border-radius: 5px;
+    background-color: bisque;
+    margin-left: calc(50% - 240px);
+    margin-right: calc(50% - 240px);
+    margin-top: calc(25% - 240px);
+    padding: 100px;
+}
+
+#start {
+    display: block;
+    margin: auto;
+    font-family: 'VT323', monospace;
+    margin-left: auto;
+}
+
+#paw {
+    position: absolute;
+    top: -40px;
+    left: 420px;
+}
