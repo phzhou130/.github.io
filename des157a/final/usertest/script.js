@@ -40,7 +40,7 @@ game.addEventListener("click", function(){
 
     document.getElementById('quit').addEventListener("click",function(){
         //window.location.reload(true);
-        window.location.reload(true);
+        setTimeout(location.reload);
     });
     
 function moveBowlLeft()
@@ -48,6 +48,7 @@ function moveBowlLeft()
     if (bowlimageLeft > 700){
         bowlimageLeft -=20;
         bowlimage.style.left = bowlimageLeft + 'px';
+        console.log(bowlimage.left);
 
     }
     
@@ -64,10 +65,11 @@ function moveBowlRight()
 }
 
 function moveBowlLeft1()
-{
+{       
     if (bowlimageLeft1 > 0){
         bowlimageLeft1 -=20;
         bowlimage1.style.left = bowlimageLeft1 + 'px';
+        console.log(bowlimage1.left);
 
     }
     
@@ -78,6 +80,7 @@ function moveBowlRight1()
     if((bowlimageLeft1 < 450)){
         bowlimageLeft1 +=20;
         bowlimage1.style.left = bowlimageLeft1 + 'px';
+
     }
    
 
@@ -88,6 +91,8 @@ function control(e){
     console.log("press");
     e.preventDefault();
     if(e.key == "ArrowLeft"){
+        console.log("arrowleft");
+
         moveBowlLeft();
         // var meow = new Audio("cat_meow.wav");
         // meow.play();

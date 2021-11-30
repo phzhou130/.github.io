@@ -23,6 +23,7 @@
             gameControl.innerHTML += '<button id ="quit">Restart</button>';
             document.getElementById('game').className='showing';
             document.getElementById('quit').addEventListener("click",function(){
+                
                 location.reload();
             });
             setUpTurn();
