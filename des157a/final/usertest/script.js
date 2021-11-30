@@ -13,6 +13,8 @@
     Thank you for your time`);
 
 var game= document.getElementById("start");
+var gamestart= document.getElementById("gamestart");
+
 var bowlimage = document.querySelector(".bowlimage");
 var fishes=document.querySelector(".fishes");
 var bones=document.querySelector(".bones");
@@ -31,23 +33,29 @@ var bowlimageLeft1= parseInt(window.getComputedStyle(bowlimage1).getPropertyValu
 
 var bowlimageBottom1= parseInt(window.getComputedStyle(bowlimage1).getPropertyValue("bottom"));
 game.addEventListener("click", function(){
-    console.log("game has started");
     generateFish();
     generateBone();
-    document.addEventListener("keydown",control);
-
+    document.addEventListener("keydown",control);    
+    console.log("game has started");
+    gamestart.innerHTML += '<button id ="quit">Restart</button>';
+        document.getElementById('quit').addEventListener("click",function(){
+            
+            location.reload();
+        });
 });
 
-    document.getElementById('quit').addEventListener("click",function(){
-        //window.location.reload(true);
-        // e.preventDefault();
-        // location.reload();
-        location.href=location.href;
+  
 
-    });
+    // document.getElementById('quit').addEventListener("click",function(){
+    //     //window.location.reload(true);
+    //     // e.preventDefault();
+    //     // location.reload();
+    //     location.href=location.href;
+
+    // });
     
 function moveBowlLeft()
-{    console.log("move");
+{    
 
     if (bowlimageLeft > 700){
         bowlimageLeft -=20;
@@ -55,7 +63,7 @@ function moveBowlLeft()
         console.log(bowlimage.left);
 
     }
-    
+    console.log("move");
 }
 //right key for moving the bowl to right
 function moveBowlRight()
@@ -73,7 +81,6 @@ function moveBowlLeft1()
     if (bowlimageLeft1 > 0){
         bowlimageLeft1 -=20;
         bowlimage1.style.left = bowlimageLeft1 + 'px';
-        console.log(bowlimage1.left);
 
     }
     
@@ -92,7 +99,6 @@ function moveBowlRight1()
 //control the bowl to move left/ right
 // Make sure you can print out "press" when a button is pressed.
 function control(e){
-    console.log("press");
     e.preventDefault();
     if(e.key == "ArrowLeft"){
         console.log("arrowleft");
@@ -111,7 +117,9 @@ function control(e){
         // var woof = new Audio("dog_woof.wav");
         // woof.play();
         moveBowlRight1();
-    }
+    }    
+    console.log("press");
+
 }   
 //control the bowl to catch the dropping thing
 //this function is for the dropping item
