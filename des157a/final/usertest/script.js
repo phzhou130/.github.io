@@ -40,14 +40,14 @@ game.addEventListener("click", function(){
 
     document.getElementById('quit').addEventListener("click",function(e){
         //window.location.reload(true);
-        // e.preventDefault();
-        // location.reload();
-        setTimeout(location.reload());
+        e.preventDefault();
+        location.reload();
 
     });
     
 function moveBowlLeft()
-{
+{    console.log("move");
+
     if (bowlimageLeft > 700){
         bowlimageLeft -=20;
         bowlimage.style.left = bowlimageLeft + 'px';
@@ -58,7 +58,7 @@ function moveBowlLeft()
 }
 //right key for moving the bowl to right
 function moveBowlRight()
-{
+{   
     if((bowlimageLeft < 1300)){
         bowlimageLeft +=20;
         bowlimage.style.left = bowlimageLeft + 'px';
