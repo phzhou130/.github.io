@@ -35,11 +35,12 @@ game.addEventListener("click", function(){
     generateFish();
     generateBone();
     document.addEventListener("keydown",control);
+
 });
 
-document.getElementById('quit').addEventListener("click",function(){
+    document.getElementById('quit').addEventListener("click",function(){
         //window.location.reload(true);
-        location.reload(false);
+        window.location.reload(true);
     });
     
 function moveBowlLeft()
