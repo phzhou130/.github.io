@@ -38,9 +38,12 @@ game.addEventListener("click", function(){
 
 });
 
-    document.getElementById('quit').addEventListener("click",function(){
+    document.getElementById('quit').addEventListener("click",function(e){
         //window.location.reload(true);
-        setTimeout(location.reload);
+        // e.preventDefault();
+        // location.reload();
+        setTimeout(location.reload());
+
     });
     
 function moveBowlLeft()
