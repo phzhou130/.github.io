@@ -38,10 +38,11 @@ game.addEventListener("click", function(){
 
 });
 
-    document.getElementById('quit').addEventListener("click",function(e){
+    document.getElementById('quit').addEventListener("click",function(){
         //window.location.reload(true);
-        e.preventDefault();
-        location.reload();
+        // e.preventDefault();
+        // location.reload();
+        location.href=location.href;
 
     });
     
