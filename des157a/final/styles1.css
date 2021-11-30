@@ -119,26 +119,27 @@ p{
     grid-template-rows: 200px 1fr; */
     padding: 20px;
     margin-top:  50px;
-    border-radius: 20px;
-    background: wheat;
+    
+    background-color: rgba(255, 255, 255, 0.7)
     /* transition: 0.3s; */
 }
 #tester1{
     display: block;
     margin-left: 200px;
-    background-color:burlywood;
+    background-color: rgba(0, 0, 0, 0.7);
+
     
 }
 #tester2{
     display: block;
     margin-right: 200px;
-    background-color:burlywood;
+    background-color: rgba(0, 0, 0, 0.7);
     
 }
 #tester3{
     display: block;
     margin-left: 200px;
-    background-color:burlywood;
+    background-color: rgba(0, 0, 0, 0.7);
     
 }
 
@@ -174,7 +175,8 @@ footer{
 }
 a{
     text-decoration: none;
-    color: goldenrod;
+        color: white;
+
 }
 
 
