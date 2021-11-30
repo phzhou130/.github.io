@@ -36,7 +36,7 @@ game.addEventListener("click", function(){
     gamestart.innerHTML += '<button id ="quit">Restart</button>';
         document.getElementById('quit').addEventListener("click",function(){
             
-            location.replace("https://phzhou130.github.io/des157a/final/usertest/index.html");
+            window.location.reload();
                 });
     generateFish();
     generateBone();
