@@ -33,15 +33,16 @@ var bowlimageLeft1= parseInt(window.getComputedStyle(bowlimage1).getPropertyValu
 
 var bowlimageBottom1= parseInt(window.getComputedStyle(bowlimage1).getPropertyValue("bottom"));
 game.addEventListener("click", function(){
-    generateFish();
-    generateBone();
-    document.addEventListener("keydown",control);    
-    console.log("game has started");
     gamestart.innerHTML += '<button id ="quit">Restart</button>';
         document.getElementById('quit').addEventListener("click",function(){
             
             location.reload();
         });
+    generateFish();
+    generateBone();
+    document.addEventListener("keydown",control);    
+    console.log("game has started");
+    
 });
 
   
