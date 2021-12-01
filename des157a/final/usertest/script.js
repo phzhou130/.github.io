@@ -23,15 +23,13 @@
     var score_2 = document.getElementById("score2");
     var score1 = 0;
     var score2 = 0;
-
-
+    
+    // var bowlimageLeft =bowlimage.offsetLeft;
     var bowlimageLeft = parseInt(window.getComputedStyle(bowlimage).getPropertyValue("left"));
-    var bowlimageBottom = parseInt(window.getComputedStyle(bowlimage).getPropertyValue("bottom"));
     //left key for moving the bowl to left
     var bowlimage1 = document.querySelector(".bowlimage1");
     var bowlimageLeft1 = parseInt(window.getComputedStyle(bowlimage1).getPropertyValue("left"));
 
-    var bowlimageBottom1 = parseInt(window.getComputedStyle(bowlimage1).getPropertyValue("bottom"));
     game.addEventListener("click", function() {
         gamestart.innerHTML += '<button id ="quit">Restart</button>';
         document.getElementById('quit').addEventListener("click", function() {

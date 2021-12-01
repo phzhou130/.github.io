@@ -13,8 +13,14 @@
 </head>
 
 <body>
-    <div id="backgroundimage"></div>
-    <div class="game">
+    <!-- the start scene -->
+    <div class="game">    
+        <div id="startimage" class="showing">
+            <img id="dogimage"src="./huhu.png" alt="huhu">
+            <img id="catimage"src="./hopi.png" alt="hopi">
+        </div> 
+            
+        <!-- gamerule -->
         <div id="gamestart" class="showing">
             <img id="paw" src="./paw.png" alt="paw">
             <h2>WHO GETS THE TREATS</h2>
@@ -22,9 +28,10 @@
                 <br> They both live in the ZHOU's family.
                 <br> Help them to get the treats they wanted!
                 <br> RULE:
-                <br> Press the A(move left) and D(move right) key to control the dog HUHU's bowl
+                <br>Two players are needed for this game.
+                <br> Player1: Press the A(move left) and D(move right) key to control the dog HUHU's bowl.
 
-                <br> Press the left and right key to control the cat Hopi's bowl
+                <br> Player2: Press the left and right key to control the cat Hopi's bowl.
 
                 <br> Catch the treats with the bowls.
                 <br> The player who reach 15 points first will win the game.
@@ -32,25 +39,23 @@
             </p>
             <button id="start">FIGHT</button>
         </div>
+        <!-- players can play now -->
         <div id="gamefunction" class="hide">
             <div class="score"></div>
             <div class="fishes">
-                <!-- <img src="./fish.png" alt="fish" > -->
 
             </div>
             <div class="bones">
-                <!-- <img src="./fish.png" alt="fish" > -->
 
             </div>
-            <!-- control the mouse and the score -->
+            <!-- control the score -->
             <div class="bowlimage1">
                 <div id="score1">
                     <p>HUHU:0</p>
                 </div>
-
                 <img src="./score1_1.png" alt="score">
-
             </div>
+
             <div class="bowlimage">
                 <div id="score2">
                     <p>HOPI:0</p>
@@ -58,7 +63,12 @@
                 <img src="./score1_1.png" alt="score">
             </div>
         </div>
-
+        <!-- the winner's scene -->
+        <div id="winner" class="hide">
+            <img id="huhuwin"src="./huhu.png" alt="huhu" class="hide">
+            <img id="hopiwin"src="./hopi.png" alt="hopi" class="hide">
+            <p>WINNER</p>
+        </div>
     </div>
 
 
