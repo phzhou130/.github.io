@@ -21,7 +21,9 @@
     // var bowlimageLeft = parseInt(window.getComputedStyle(bowlimage).getPropertyValue("left"));
 
     var bowlimage1 = document.querySelector(".bowlimage1");
-    var bowlimageLeft1 = parseInt(window.getComputedStyle(bowlimage1).getPropertyValue("left"));
+    var bowlimageLeft1 =bowlimage1.offsetLeft;
+
+    // var bowlimageLeft1 = parseInt(window.getComputedStyle(bowlimage1).getPropertyValue("left"));
 
     //this function is used to start the game, the start scene will be hided as an overlay
     game.addEventListener("click", function () {
@@ -75,7 +77,7 @@
     }
     //d key for moving the dog's bowl to right
     function moveBowlRight1() {
-        if (bowlimageLeft1 < ((screenwidth) / 2)-300) {
+        if (bowlimageLeft1 < ((screenwidth) / 2)-350) {
             bowlimageLeft1 += 20;
             bowlimage1.style.left = bowlimageLeft1 + 'px';
 
@@ -166,7 +168,7 @@ var woof = new Audio("drop1.wav");
         if (score1 > 15) {
             score_1.innerHTML = `<p>HUHU wins with 15 treats!<p>`;
             score_2.innerHTML = `<p>Hopi Lost<p>`;
-            document.getElementById('winner1').className = 'showing';
+            document.getElementById('winner').className = 'showing';
 
             document.getElementById('huhuwin').className = 'showing';
             document.getElementById('hopiwin').className = 'hide';
@@ -192,7 +194,6 @@ var woof = new Audio("drop1.wav");
 
             meow.pause();
             meow.currentTime=0;
-
         }
     }
 
