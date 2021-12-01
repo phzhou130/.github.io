@@ -166,7 +166,7 @@ var woof = new Audio("drop1.wav");
         if (score1 > 15) {
             score_1.innerHTML = `<p>HUHU wins with 15 treats!<p>`;
             score_2.innerHTML = `<p>Hopi Lost<p>`;
-            document.getElementById('winner').className = 'showing';
+            document.getElementById('winner1').className = 'showing';
 
             document.getElementById('huhuwin').className = 'showing';
             document.getElementById('hopiwin').className = 'hide';
@@ -174,22 +174,32 @@ var woof = new Audio("drop1.wav");
             document.getElementById('gamefunction').className = 'hide';
             document.body.style.backgroundImage = "url('./gameon0.png')";
             woof.pause();
+            woof.currentTime=0;
             meow.pause();
-
+            meow.currentTime=0;
             
         }
         if (score2 > 15) {
             score_1.innerHTML = `<p>HUHU LOST!<p>`;
             score_2.innerHTML = `<p>Hopi wins with 15 treats<p>`;
             document.getElementById('winner').className = 'showing';
-
             document.getElementById('hopiwin').className = 'showing';
             document.getElementById('huhuwin').className = 'hide';
-
             document.getElementById('gamefunction').className = 'hide';
             document.body.style.backgroundImage = "url('./gameon0.png')";
             woof.pause();
+            woof.currentTime=0;
+
             meow.pause();
+            meow.currentTime=0;
+
         }
     }
+
+    // function stopgame(){
+    //     clearInterval(dropbone);
+    //     clearInterval(dropfish);
+
+
+    // }
 })();
