@@ -3,39 +3,7 @@
     'use strict';
 
     console.log("reading js");
-    // const images=document.querySelectorAll('backimages')
-    // const imagesnum=5;
-    // let scrollingNow =false;
-    // let focusImg=0;
-    // window.addEventListener('load',function(event){
-    //     let illustration=document.getElementById('illustration');
-    //     illustration.addEventListener('scroll',function(){
 
-    //         if(!scrollingNow){
-    //                     scrollingNow=true;
-    //                     if(event.deltaY > 0 && focusImg < imagesnum - 1) {
-    //                         // scrolling down
-    //                         focusImg++;
-    //                         startScroll();
-    //                      }
-    //                      else if (event.deltaY < 0 && focusImg > 0) {
-    //                         // scrolling up
-    //                         focusImg--;
-    //                         startScroll();
-    //                      }
-    //                      else {
-    //                         scrollingNow = false;
-    //                      }
-    //             }
-
-    //     });
-    //     function startScroll(){
-    //         transitionImage();
-
-    //     }
-       
-    // });
-   
 
 
 })();
