@@ -65,9 +65,7 @@
             z-index: 1;
         }
 
-        .fa-expand:hover {
-            cursor: pointer;
-        }
+    
         
         .hidden {
             opacity: 0;
