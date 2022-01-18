@@ -9,7 +9,6 @@
     const line3 = document.querySelector('#line3');
     const line4 = document.querySelector('#line4');
 
-    const loading = document.querySelector('.fa-dove');
     const poem = {
         start: [0, 6, 10,15],
         stop: [4, 9, 14,18],
@@ -34,9 +33,7 @@
             }
         }
     }
-    myVideo.addEventListener('playing', function(){
-        loading.style.display ='none';
-    })
+
     myVideo.addEventListener('mousemove',function(event){
         console.log(event.clientX);
         myVideo.style.filter=`grayscale(${event.clientX-event.clientY-event.clientY}%)`;
