@@ -8,8 +8,8 @@
     const line4 = document.querySelector('#line4');
 
     const poem = {
-        start: [0, 6, 10, 15],
-        stop: [4, 9, 14, 18],
+        start: [0, 5, 10, 15],
+        stop: [3, 8, 13, 18],
         line: [line1, line2, line3,line4]
     }
 
