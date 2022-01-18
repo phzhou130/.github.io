@@ -8,13 +8,14 @@
     const line4 = document.querySelector('#line4');
 
     const poem = {
-        start: [0, 6, 10,15],
-        stop: [4, 9, 14,18],
+        start: [0, 6, 10, 15],
+        stop: [4, 9, 14, 18],
         line: [line1, line2, line3,line4]
     }
 
 
-    const intervalID = setInterval(checkTime, 1000);
+    setInterval(checkTime, 1000);
+
     const loadingMsg = document.querySelector('#loading');
 
     myVideo.addEventListener('playing', function() {
@@ -35,7 +36,5 @@
         console.log(event.clientX);
         myVideo.style.filter=`grayscale(${event.clientX-event.clientY-event.clientY}%)`;
     })
-
-   
 
 })();
