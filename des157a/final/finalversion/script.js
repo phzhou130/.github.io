@@ -86,7 +86,6 @@
 
     }
     //control the bowl to move left/ right
-    // Make sure you can print out "press" when a button is pressed.
     function control(e) {
         e.preventDefault();
         if (e.key == "ArrowLeft") {
