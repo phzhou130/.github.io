@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(231, 238, 243, 0.815);
+    font-family: 'Dongle', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    background-color: rgb(22, 198, 230);
+}
+
+#moods {
+    padding: 100px 0;
+    font-size: 90px;
+    color: rgb(253, 253, 253);
+}
