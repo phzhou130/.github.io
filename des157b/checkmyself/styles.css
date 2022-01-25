@@ -12,3 +12,9 @@ body {
     font-size: 90px;
     color: rgb(253, 253, 253);
 }
+#banner{
+    color: rgb(22, 198, 230);
+    background-color: azure;
+    border: none;
+    padding: 20px;
+}
