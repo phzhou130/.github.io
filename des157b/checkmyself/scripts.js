@@ -16,7 +16,8 @@
     }
 
     function showMoodInfo(point, data){
-        const fontAwesomeFaces = ['<i class="material-icons" style="font-size:48px;">water_drop</i>'];
+        const fontAwesomeFaces = ['<i class="material-icons" style="font-size:48px;">water_drop</i>'
+        ];
         document.querySelector('#reason').innerHTML = data[point].reason;
 
         document.querySelector('#moods').innerHTML += fontAwesomeFaces[0];
@@ -24,12 +25,13 @@
 
     }
     let numberdata=0;
-    
+
     document.addEventListener('click',reportPos)
 
     function reportPos() {
         showMoodInfo(numberdata,globalData);
         numberdata++;
+
     }
 
     getData();
