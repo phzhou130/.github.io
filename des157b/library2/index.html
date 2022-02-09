@@ -8,29 +8,58 @@
       <link rel="stylesheet" href="styles.css">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-</head>
-<body>
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap" rel="stylesheet">
 
+</head>
+<body>      
       <div class="wrapper"></div>
-      <div class="hero-title"><h1>Hi</h1></div>
+
+      <section class="flag">
+
+      <div class="hero-title"><h1>HI 2022</h1></div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r99/three.min.js"></script>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
       <script src="hover_effects.umd.js"></script>
 
+
+
 <script>
 
+
+      const wrap = document.querySelector(".wrapper");
+      wrap.style.zIndex = "0";  
       var hoverDistort = new hoverEffect({
             parent: document.querySelector('.wrapper'),
             intensity: 0.5,
             image1: 'img_one.jpeg',
             image2: 'img_two.jpeg',
+
             displacementImage: '4.png'
       });
 
-// Wrap every letter in a span
-    var textWrapper = document.querySelector('.hero-title');
-    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+      var textWrapper = document.querySelector('.hero-title');
+      const section = document.querySelector("section.flag");
+   
+
+      var scene = new THREE.Scene();
+      var camera = new THREE.PerspectiveCamera(75, section.clientWidth / section.clientHeight, 0.1, 1000 );
+
+      var renderer = new THREE.WebGLRenderer({ 
+      antialias: true,
+      alpha: true
+      });
+      renderer.setSize(section.clientWidth, section.clientHeight);
+      renderer.setClearColor(0xf2f2f0, 0);
+
+      section.appendChild(renderer.domElement);
+
+      const loader = new THREE.TextureLoader();
+
+      var geometry = new THREE.PlaneGeometry(5, 3, 50, 30);    
+      textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
     $(document).ready(function() {
 
@@ -40,7 +69,7 @@
         .add({
         targets: '.hero-title .letter',
         translateX: [80,0],
-        translateZ: 0,
+        translateZ: -1,
         opacity: [0,1],
         easing: "easeOutExpo",
         duration: 1400,
@@ -57,10 +86,66 @@
         duration: 800,
         delay: (el, i) => 40 * i
         });         
+        },
+        function () {
+        anime.timeline({loop: false})
+        .add({
+        targets: '.hero-title .letter',
+        translateX: [0,-160],
+        opacity: [0,1],
+        easing: "easeInExpo",
+        duration: 800,
+        delay: (el, i) => 40 * i
+        });         
         }
     );
                 
-});
+      });
+
+      var material = new THREE.MeshBasicMaterial({ 
+            opacity:0,
+            transparent:true,
+            map: loader.load("back3.png",() =>{
+                  material.opacity = 1;
+            }),
+     
+      });
+      
+
+      var flag = new THREE.Mesh( geometry, material );
+      flag.rotation.set(-0.1, 0, 0);
+
+      scene.add(flag);
+
+      camera.position.z = 1.8;
+
+      const clock = new THREE.Clock();
+
+      function animate() {
+      const time = clock.getElapsedTime()
+      
+      flag.geometry.vertices.map(v => {    
+            const multipler = ((v.x + 2.5) / 5)
+            
+            const wave1 = 0.5 * Math.sin(0.5 * v.x + time * 2)
+            const wave2 = 0.2 * Math.sin(2 * v.x + time * 3)
+            
+            v.z = (wave1 + wave2) * multipler
+      })
+      
+      flag.geometry.verticesNeedUpdate = true 
+      
+            requestAnimationFrame( animate )
+            renderer.render( scene, camera )
+      }
+
+      animate();
+
+      window.addEventListener("resize", function () {
+      camera.aspect = section.clientWidth / section.clientHeight
+      camera.updateProjectionMatrix()
+      renderer.setSize(section.clientWidth, section.clientHeight)
+      });
 
 </script>
 </body>

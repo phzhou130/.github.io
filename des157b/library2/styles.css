@@ -13,6 +13,7 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 0;
 }
 
 .hero-title {
@@ -20,12 +21,18 @@ html, body {
     top: 35%;
     left: 30%;
     transform: translate(-50%, -50%);
-    color: white;
-    font-family: "Cosi Azure";
-    font-size: 84px;
+    color: rgb(241, 240, 247);
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 100px;
 }
 
 .hero-title .letter {
     display: inline-block;
     opacity: 0;
 }
+section.flag {
+    width: 100vw;
+    max-height: 100vh;
+    height: 75vw;
+    z-index: 999;
+  }
