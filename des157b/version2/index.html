@@ -4,18 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>V2</title>
     <link rel="stylesheet" type="text/css" href="./styles.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
-    <script type="module">
-
-        // Find the latest version by visiting https://cdn.skypack.dev/three.
-      
-        import * as THREE from 'https://cdn.skypack.dev/three@0.138.2';
-      
-        const scene = new THREE.Scene();
-      
-      </script>
 
 </head>
 <body>
@@ -43,31 +34,21 @@
 
                 <label for="response">Describe Your Feelings with one word</label>
                 <input type="text" id="response-s" name="response-s" >
-
-                <input type="submit" id="submit" value="SUBMIT">
+                <a href="./v2test/index.html">
+                    SUBMIT
+                    <!-- <input type="submit" id="submit" value="SUBMIT" /> -->
+                </a>
+                
             </form>
         </div>
     </div>
 
-    <div id="threed" class="hide">
-            <div id="loading" >
-                <h1>Three.js SkyBoxes</h1>
-                <div>Loading...</div>
-            </div>
-            <div class="drag">Click And Drag the screen to move around</div>
-            <div class="buttons">
-                <button id="space">Space</button>
-                <button id="mountains">Mountains</button>
-                <button id="water">Water</button>
-                <button id="lava">Lava</button>
-            <button id="autoRotate">Auto Rotate</button> 
-            <button id="zoom">Outside Box</button>
-            </div>
-    </div>
+  
     
 
     <script  src="./script.js"></script>
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    
     <!-- <script src="https://threejs.org/build/three.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
 
