@@ -83,7 +83,7 @@ button {
 	top: 1rem;
 	right: 1rem;
 	z-index: 2;
-}
+} 
 
 .menu-button span:last-child,
 .menu-button.is-active span:first-child {
@@ -100,6 +100,7 @@ button {
 	padding: clamp(1rem, 2vw, 5rem);
 	display: flex;
 	align-items: center;
+    cursor: pointer;
 }
 
 .hero--secondary {
@@ -113,6 +114,6 @@ button {
 	color: rgb(9, 14, 23);
 	-webkit-mask-image: var(--mask);
 	mask-image: var(--mask);
+    cursor: pointer;
+    
 }
-
-

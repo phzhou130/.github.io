@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+
+* {
+	box-sizing: border-box;
+}
+
+
+
+body {
+	font-family: Montserrat, sans-serif;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: rgb(9, 14, 23);
+	color: #ffffff;
+}
+svg {
+	opacity: 0;
+	position: absolute;
+}
+.wrapper {
+	position: relative;
+}
+/* Reset */
+a {
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
+button {
+	border-radius: 0.4em;
+	background: rgb(9, 14, 23);
+	color: white;
+	border: none;
+	padding: 0.5rem;
+	font-size: inherit;
+	cursor: pointer;
+}
+
+
+
+/* Text */
+.hero__heading {
+	font-size: clamp(2rem, 5vw, 8rem);
+	text-transform: uppercase;
+	margin: 0;
+}
+
+/* Menu */
+/* .menu {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	background: linear-gradient(45deg, #89deff, #57caff, #ffe46d, orange);
+	clip-path: circle(0 at calc(100% - 2rem) 2rem);
+	transition: clip-path 500ms;
+	z-index: 1;
+	font-size: clamp(1rem, 2vw, 4rem);
+}
+
+.menu.is-open {
+	clip-path: circle(200% at calc(100% - 2rem) 2rem);
+	pointer-events: all;
+}
+
+.menu a {
+	display: block;
+	padding: 0.5em;
+}
+
+.menu-button {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	z-index: 2;
+} */
+
+/* .menu-button span:last-child,
+.menu-button.is-active span:first-child {
+	display: none;
+}
+
+.menu-button.is-active span:last-child {
+	display: inline;
+} */
+
+/* Hero */
+.hero {
+	min-height: 100vh;
+	padding: clamp(1rem, 2vw, 5rem);
+	display: flex;
+	align-items: center;
+    cursor: pointer;
+}
+
+.hero--secondary {
+	--mask: radial-gradient(circle at var(--x, 70%) var(--y, 50%), black 25%, transparent 0);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(45deg, #89deff, #57caff, #ffe46d, orange);
+	color: rgb(9, 14, 23);
+	-webkit-mask-image: var(--mask);
+	mask-image: var(--mask);
+    cursor: pointer;
+    
+}
+#cursor1{
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#reply {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: text;
+    z-index: 3;
+}
+
+#reply #write-card {
+    color: rgb(255, 255, 255);
+    height: 400px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    cursor: text;
+
+}
+
+#reply #write-card form {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    cursor: text;
+
+}
+
+#reply .close {
+    width: max-content;
+    font-size: 18px;
+    transition: border 0.2s;
+    margin-left: -50px;
+}
+
+#reply .close:hover {
+    color: wheat;
+}
+
+
+
+#write-card input {
+    margin: 20px 0 18px 0;
+
+    height: 36px;
+}
+#write-card 
+#submit {
+    color: white;
+    width: 100px;
+    margin-left: 83%;
+    font-family: "Crimson Pro", serif;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 50px;
+    border: none;
+    background: none;
+}
+#reply #submit:hover{
+    color: wheat;
+}
+
+.close {
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.close p {
+    margin: 10px;
+}
+#panorama {
+    margin: 0;
+    height: 100vh;
+    background: #bdc3c7;
+}
+
+#loading {
+    position: fixed;
+    font-size: 40px;
+    z-index: -1;
+    left: 28%;
+    top: 15%;
+    color: #444;
+    text-align: center;
+  }
+  
+  .buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  button {
+    margin-bottom: 6px;
+    width: 120px;
+    font-size: 14px;
+    outline: none;
+    background: #333;
+    color: #ddd;
+    border: none;
+    text-transform: uppercase;
+    opacity: .5;
+  }
+  button:hover {
+    background: #222;
+    color: #eee;
+  }
+  button:active {
+    background: #111;
+    color: #fff;
+  }
+  
+  #autoRotate {
+    margin-top: 20px;
+  }
+  
+  .drag {
+    color: #ccc;
+    font-size: 11px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    opacity: .5;
+  }
+  #threed{
+      z-index: 7;
+  }
