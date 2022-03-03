@@ -1,4 +1,4 @@
-alert('Welcome to the user test! Task 1: Interact with the main page. Task 2: Input your message. Task 3: Interact with the 3D scene');
+alert('Welcome to the user test! This is a webpage that could create a 3d scene based on your emotions. Some part of its functionalities are still needed to be done. Task 1: Interact with the main page. Task 2: Input your message. Task 3: Interact with the 3D scene');
 
 const hero = document.querySelector('[data-hero]')
 
