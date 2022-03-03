@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>     
+  <div id="threed" class="hide"> </div>
+
+  <div class="wrapper" >
+        <div id="cursor1">
+        Press
+        </div>
+        <div class="hero">
+            <h1 class="hero__heading">EXPLORE YOUR WORLD</h1>
+        </div>
+    
+        <div class="hero hero--secondary"  aria-hidden="true" data-hero>
+            <p class="hero__heading">EXPLORE YOUR WORLD</p>
+        </div>
+  </div>
+
+  <div id="reply" class="disappear">
+        <div id="write-card">
+            <div class="close">
+                <p><i class="fa-solid fa-xmark"></i> close</p>
+            </div>
+            <form>
+                <label for="response">Describe Your Feelings with one word</label>
+                <input type="text" id="response-s" name="response-s">
+                <input type="submit" class="sendout" value="Submit" onclick="next()">
+
+            </form>
+        </div>
+   </div>
+
+
+
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://threejs.org/build/three.min.js"></script>
+  <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+</html>
