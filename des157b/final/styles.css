@@ -76,7 +76,7 @@ button {
 #cursor1{
     cursor: pointer;
     position: absolute;
-    z-index: 0;
+    z-index: 1;
     color: #ffffff;
 }
 
@@ -93,6 +93,7 @@ button {
 }
 .disappear{
   visibility: hidden; 
+  opacity: 0;
 }
 
 #reply {
@@ -163,6 +164,8 @@ button {
 .close {
     margin-bottom: 50px;
     cursor: pointer;
+    background-color: #606468;
+    border-radius: 6px;
 }
 
 .close p {
@@ -267,6 +270,80 @@ button {
   #Listresult{
     position: absolute;
     color: #57caff;
-    background-color: #111;
+    padding: 50px;
+    background-color: rgba(76, 175, 80, 0.3);
+    /* animation: fadeIn 5s; */
+    /* animation-fill-mode: forward; */
+    /* animation-iteration-count: 1; */
     margin-top: 35%;
    }
+
+   @keyframes fadeIn {
+    0% {opacity:1;}
+    100% {opacity:0;}
+  }
+
+.boxed-check-group{
+  padding-bottom: 20px;
+}
+.form-control{
+  padding-right: 100px;
+}
+
+.sendout {
+  background: #5f666b;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+  width: 75px;
+  margin-left: 50%;
+  }
+
+  .sendout:hover{
+  background: #c6ccd1;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+  }
+  #quit{
+    position: absolute;
+    margin-left: 75%;
+    margin-top: 5%;
+  }
+ 
+
+#finaldisplay{
+  
+  background: black;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#listwords{
+  font-weight: 700;
+  text-align: center;
+  font-size: 40px;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;
+  position: relative;
+}
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}

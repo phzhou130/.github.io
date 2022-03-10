@@ -11,11 +11,19 @@
 </head>
 <body>     
   <div id="Listresult" ></div>
+  <div id="finaldisplay" class="hide">
+      <h1 id="listwords"> </h1>  
+      <!-- <h1 id="account"> This site has been helped people<span id="visit"></span> times.</h1> -->
 
-  <div id="threed" class="hide"> </div>
+  </div>
+
+
+  <div id="threed" class="hide"> 
+    <button id="quit">FINISH</button>
+  </div>
 
   <div class="wrapper" >
-        <div id="cursor1">
+        <div id="cursor1" class="show">
         Press
         </div>
         <div class="hero">
@@ -29,7 +37,9 @@
 
   <div id="reply" class="disappear">
         <div id="write-card">
-            <div class="close">
+            <!-- <button class="close">                 
+            </button> -->
+            <div class="close"> 
                 <p><i class="fa-solid fa-xmark"></i> close</p>
             </div>
             <form>
@@ -37,14 +47,17 @@
                     <label class="form-control">
                         <input type="checkbox" name="good" id="good"/>
                         GOOD
+                        <span class="w3docs"></span>
                     </label>
                     <label class="form-control">
                         <input type="checkbox" name="medium" id="medium"/>
                         MEDIUM
+                        <span class="w3docs"></span>
                     </label>
                     <label class="form-control">
                         <input type="checkbox" name="bad" id="bad"/>
                         BAD
+                        <span class="w3docs"></span>
                     </label>
                 </div>
 

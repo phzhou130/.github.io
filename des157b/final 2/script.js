@@ -11,11 +11,8 @@ const submitform = document.querySelector('.sendout');
 const threed = document.getElementById('threed');
 const inputs = document.querySelectorAll("#reply input:not([type=submit])");
 const friendList = document.getElementById('friendList');
-// const good = document.getElementById('good');
-// const bad = document.getElementById('bad');
-// const medium = document.getElementById('medium');
-// const answer = document.getElementById('answer');
-// const submitbutton = document.getElementById('submitbutton');
+
+
 
 
 
@@ -64,6 +61,9 @@ form.addEventListener('submit', function(e) {
   threed.className = 'show';
   form.className = 'disappear';
   addFriend();
+  //  good.addEventListener('click', () => switchSkyBox('scene1'))
+  //  medium.addEventListener('click', () => switchSkyBox('scene2'))
+  //  bad.addEventListener('click', () => switchSkyBox('scene3'))
 })
 
 async function addFriend(){
@@ -73,9 +73,11 @@ async function addFriend(){
     let value = inputs[i].value;
     newFriend[key] = value;
   }
-  if(newFriend.responses != ""){
+  if(newFriend.responses != "" ){
+
    const newFriendData = new Parse.Object('final');
-   newFriendData.set('responses',newFriend.responses);
+   newFriendData.set('responses',newFriend.responses);  
+   
    try{
       const results = await newFriendData.save();
       resetFormFields();
@@ -84,6 +86,7 @@ async function addFriend(){
      console.error('error');
    }
   }
+
 }
 
 function resetFormFields(){
@@ -120,7 +123,7 @@ async function displayFriends() {
 
 
 let scene, camera, renderer, skyboxGeo, skybox, controls;
-const skyboxImage = "scene1";
+let skyboxImage = "scene1";
 
 
 function init() {
@@ -194,3 +197,20 @@ function onWindowResize() {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
+
+const good = document.getElementById('good');
+const bad = document.getElementById('bad');
+const medium = document.getElementById('medium');
+
+function switchSkyBox (skyboxName) {
+  scene.remove(skybox);
+  skyboxImage = skyboxName;
+  const materialArray = createMaterialArray(skyboxImage);
+
+  skybox = new THREE.Mesh(skyboxGeo, materialArray);
+  scene.add(skybox);
+}
+
+good.addEventListener('click', () => switchSkyBox('scene1'))
+medium.addEventListener('click', () => switchSkyBox('scene2'))
+bad.addEventListener('click', () => switchSkyBox('scene3'))

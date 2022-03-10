@@ -10,16 +10,9 @@ const closeform = document.querySelector('.close');
 const submitform = document.querySelector('.sendout');
 const threed = document.getElementById('threed');
 const inputs = document.querySelectorAll("#reply input:not([type=submit])");
-const friendList = document.getElementById('friendList');
-// const good = document.getElementById('good');
-// const bad = document.getElementById('bad');
-// const medium = document.getElementById('medium');
-// const answer = document.getElementById('answer');
-// const submitbutton = document.getElementById('submitbutton');
-
-
-
-
+const finish = document.getElementById("quit");
+const finaldisplay = document.getElementById("finaldisplay");
+const account =document.getElementById("account");
 
 
 window.addEventListener('mousemove', (e) => {
@@ -39,10 +32,11 @@ window.addEventListener('mousemove', (e) => {
 
 enterbutton.addEventListener('click', function() {
     form.className = 'show';
+    cursor1.style.zIndex="0";
 });
 
 closeform.addEventListener('click', function() {
-    form.className = 'hide';
+    form.className = 'disappear';
 })
 
 // submitform.addEventListener('click', function(){
@@ -64,6 +58,9 @@ form.addEventListener('submit', function(e) {
   threed.className = 'show';
   form.className = 'disappear';
   addFriend();
+  //  good.addEventListener('click', () => switchSkyBox('scene1'))
+  //  medium.addEventListener('click', () => switchSkyBox('scene2'))
+  //  bad.addEventListener('click', () => switchSkyBox('scene3'))
 })
 
 async function addFriend(){
@@ -73,9 +70,10 @@ async function addFriend(){
     let value = inputs[i].value;
     newFriend[key] = value;
   }
-  if(newFriend.responses != ""){
+  if(newFriend.responses !=""){
    const newFriendData = new Parse.Object('final');
-   newFriendData.set('responses',newFriend.responses);
+   newFriendData.set('responses',newFriend.responses);  
+   
    try{
       const results = await newFriendData.save();
       resetFormFields();
@@ -84,26 +82,34 @@ async function addFriend(){
      console.error('error');
    }
   }
+
 }
 
 function resetFormFields(){
   document.getElementById("responses").value="";
 }
 
+const theListItem = document.getElementById("Listresult");
 
 
 async function displayFriends() {
   const friends = Parse.Object.extend('final');
   const query = new Parse.Query(friends);
-  const results = await query.ascending('responses').find();
+  const results = await query.ascending('createdAt').find();
+
   // console.log(results);
   try {
-      
       results.forEach(function(eachFriend) {
           const responses = eachFriend.get('responses');
-          const theListItem = document.getElementById("Listresult");
+          console.log(responses);
           theListItem.innerHTML = `<p>You are feeling ${responses} now, explore the 3d world, hope you have a nice day<p>`;
-      })
+          theListItem.style.animation="fadeIn 8s 1";
+          theListItem.style.animationFillMode = "forwards";
+          const newemotion=document.getElementById("listwords");
+
+          newemotion.innerHTML+=`${responses}`;
+          newemotion.innerHTML+=" ";
+        })
   } catch(error) {
       console.log("error: ", error);
   }
@@ -113,14 +119,8 @@ async function displayFriends() {
 
 
 
-
-
-
-
-
-
 let scene, camera, renderer, skyboxGeo, skybox, controls;
-const skyboxImage = "scene1";
+let skyboxImage = "scene1";
 
 
 function init() {
@@ -194,3 +194,27 @@ function onWindowResize() {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
+
+const good = document.getElementById('good');
+const bad = document.getElementById('bad');
+const medium = document.getElementById('medium');
+
+function switchSkyBox (skyboxName) {
+  scene.remove(skybox);
+  skyboxImage = skyboxName;
+  const materialArray = createMaterialArray(skyboxImage);
+
+  skybox = new THREE.Mesh(skyboxGeo, materialArray);
+  scene.add(skybox);
+}
+
+good.addEventListener('click', () => switchSkyBox('scene1'))
+medium.addEventListener('click', () => switchSkyBox('scene2'))
+bad.addEventListener('click', () => switchSkyBox('scene3'))
+
+
+finish.addEventListener('click', function() {
+  threed.className = "hide";
+  enterbutton.className ="hide";
+  finaldisplay.classList="show";
+});
