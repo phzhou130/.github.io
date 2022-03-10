@@ -39,14 +39,7 @@ closeform.addEventListener('click', function() {
     form.className = 'disappear';
 })
 
-// submitform.addEventListener('click', function(){
-//   // form.className = 'hide';
-//   console.log('hi');
-//   enterbutton.className ='hide';
-//   console.log('bye');
-//   threed.className = 'show';
 
-// })
 
 
 
@@ -58,9 +51,7 @@ form.addEventListener('submit', function(e) {
   threed.className = 'show';
   form.className = 'disappear';
   addFriend();
-  //  good.addEventListener('click', () => switchSkyBox('scene1'))
-  //  medium.addEventListener('click', () => switchSkyBox('scene2'))
-  //  bad.addEventListener('click', () => switchSkyBox('scene3'))
+
 })
 
 async function addFriend(){
@@ -102,11 +93,10 @@ async function displayFriends() {
       results.forEach(function(eachFriend) {
           const responses = eachFriend.get('responses');
           console.log(responses);
-          theListItem.innerHTML = `<p>You are feeling ${responses} now, explore the 3d world, hope you have a nice day<p>`;
+          theListItem.innerHTML = `<p>You are feeling ${responses} now, explore the 3d world with your mouse. You can press to rotate the images. Hope you have a nice day<p>`;
           theListItem.style.animation="fadeIn 8s 1";
           theListItem.style.animationFillMode = "forwards";
           const newemotion=document.getElementById("listwords");
-
           newemotion.innerHTML+=`${responses}`;
           newemotion.innerHTML+=" ";
         })

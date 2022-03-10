@@ -269,13 +269,12 @@ button {
    */
   #Listresult{
     position: absolute;
-    color: #57caff;
+    color: #ffffff;
     padding: 50px;
-    background-color: rgba(76, 175, 80, 0.3);
-    /* animation: fadeIn 5s; */
-    /* animation-fill-mode: forward; */
-    /* animation-iteration-count: 1; */
+    background-color: rgba(76, 175, 80, 0.7);
     margin-top: 35%;
+    font-weight: bold;
+    font-size: x-large;
    }
 
    @keyframes fadeIn {
@@ -346,4 +345,11 @@ button {
   100% {
     background-position-x: 500%;
   }
+}
+#account{
+  background-color: rgba(245, 245, 245,0.9);
+  color: #000;
+  position: absolute;
+  top: 30%;
+  padding: 50px;
 }
